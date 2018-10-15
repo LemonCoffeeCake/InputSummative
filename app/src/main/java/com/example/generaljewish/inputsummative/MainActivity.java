@@ -1,5 +1,6 @@
 package com.example.generaljewish.inputsummative;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    private int team1Total=0;
-    private int team2Total=0;
+    int team1Total=0;
+    int team2Total=0;
 
     public void Team1ScoreFT(View view) {
         team1Total++;
@@ -54,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateTeam1() {
         TextView scoreTextView = findViewById(R.id.Team1Score);
-        scoreTextView.setText(team1Total);
+        scoreTextView.setText(Integer.toString(team1Total));
     }
     private void updateTeam2(){
         TextView scoreTextView = findViewById(R.id.Team2Score);
-        scoreTextView.setText(team2Total);
+        scoreTextView.setText(Integer.toString(team2Total));
     }
 }
